@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: rgba(0, 255, 68, 0.808);
+    --color2: rgba(238, 247, 241, 0.808);
+    --color3: orange;
+    --color4: red;
+    --color5: gray;
+}
+
+body {
+    background-color: black;
+    /* background: #111; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-family: cursive;
+    background-image: url("/img/cinema.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+h1 {
+    text-align: center;
+    text-shadow: -2px -2px 7px white;
+    color: var(--color4);
+    font-size: 70px;
+    font-family: cursive;
+    letter-spacing: 1px;
+}
+
+.cinema {
+    width: 750px;
+    height: 500px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+.seat {
+    background: linear-gradient(to top, black, var(--color1));
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    transition: .2s;
+}
+
+.marked {
+    border: 1px solid white;
+    background: linear-gradient(to top, black, var(--color2));
+}
+
+.selected {
+    background: linear-gradient(to top, black, var(--color3));
+    border: 1px solid white
+}
+
+.booked {
+    background: linear-gradient(to top, black, var(--color4));
+}
+
+.seat:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px -2px 3px 4px white;
+}
+
+.seat.booked:hover {
+    background-color: var(--color5);
+    cursor: not-allowed;
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    background-color: var(--color3);
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 10px orange;
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+
+    cursor: pointer;
+}
+
+.popup .btn-hl {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+
+    background-color: transparent;
+    border: none;
+    color: white;
+
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn-book-seat {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: cursive;
+    transition: .3s;
+    padding: 5px;
+}
+
+.btn-book-seat:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
+    
+}
